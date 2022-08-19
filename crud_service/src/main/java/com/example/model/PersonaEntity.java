@@ -30,6 +30,10 @@ public class PersonaEntity implements Serializable {
     @Column(name = "documento")
     private Long documento;
 
+    @JoinColumn(name = "id_empresa", referencedColumnName = "id_empresa")
+    @ManyToOne(fetch =  FetchType.EAGER)
+    private EmpresaEntity empresaEntity;
+
     public Long getId_persona() {
         return id_persona;
     }
@@ -60,5 +64,13 @@ public class PersonaEntity implements Serializable {
 
     public void setDocumento(Long documento) {
         this.documento = documento;
+    }
+
+    public EmpresaEntity getEmpresaEntity() {
+        return empresaEntity;
+    }
+
+    public void setEmpresaEntity(EmpresaEntity empresaEntity) {
+        this.empresaEntity = empresaEntity;
     }
 }

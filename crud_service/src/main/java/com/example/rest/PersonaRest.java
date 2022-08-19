@@ -17,7 +17,7 @@ public class PersonaRest {
     @Autowired
     private PersonaService personaService;
 
-    @GetMapping("/listar")
+    @GetMapping("/listarPersona")
     private ResponseEntity<List<PersonaEntity>> listarTodasPersonas(){
         return ResponseEntity.ok(personaService.getAllPerson());
     }
