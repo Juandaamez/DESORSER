@@ -1,0 +1,61 @@
+--->CONFIGURACION INICIAL 
+    npm init
+
+--->LIBRERIAS NECESARIAS
+    npm i cors 
+    npm i express 
+    npm i morgan 
+    npm i pg-promise 
+
+--->TYPES PARA EL DESARROLLO
+    npm i nodemon --save-dev 
+    npm i @types/cors --save-dev 
+    npm i @types/express --save-dev 
+    npm i @types/morgan --save-dev
+
+--->SCRIPTS PERSONALIZADOS
+"scripts": {
+    "build": "tsc -w",
+    "dev": "nodemon build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+--->INDICARLE AL PROYECTO QUE USAREMOS TYPESCRIPT
+    tsc -init
+
+--->CREACION DE CARPETAS
+
+mkdir database
+mkdir src
+cd src
+  mkdir config
+        cd config
+            mkdir api
+            mkdir connection
+            mkdir domains
+cd..
+cd src
+  mkdir controllers
+  mkdir repository
+  mkdir routes
+  mkdir daos
+
+
+===============================================================================
+
+ESTRUCTURA PARA LA CONEXION DE LA BASE DE DATOS 
+
+          -->VARIABLES_DB
+CONEXION |
+          -->OPCIONES_CONNEXION-->FUNCIONES_CONEXION
+
+===============================================================================
+
+ESTRUCTURA DE TRABAJO
+
+DB-->REPO-->DAO-->CONTROLADOR-->RUTA-->SERVIDOR-->USUARIO
+
+USUARIO-->SERVIDOR-->RUTAS-->CONTROLADOR-->DAO-->REPO-->DB
+
+===============================================================================
+
